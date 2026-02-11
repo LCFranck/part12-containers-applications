@@ -1,0 +1,24 @@
+(base) cassa@FatAss:~/fullstack$ ls
+part12-containers-applications  typescript
+(base) cassa@FatAss:~/fullstack$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+a3629ac5b9f4: Pull complete
+Digest: sha256:cd1dba651b3080c3686ecf4e3c4220f026b521fb76978881737d24f200828b2b
+Status: Downloaded newer image for ubuntu:latest
+root@d1eb85494304:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@d1eb85494304:/# cd usr
+root@d1eb85494304:/usr# cd src
+root@d1eb85494304:/usr/src# cd app
+bash: cd: app: No such file or directory
+root@d1eb85494304:/usr/src# ls
+root@d1eb85494304:/usr/src# mkdir app
+root@d1eb85494304:/usr/src# cd app
+root@d1eb85494304:/usr/src/app# touch index.js
+root@d1eb85494304:/usr/src/app# ls
+index.js
+root@d1eb85494304:/usr/src/app# exit
+exit
+(base) cassa@FatAss:~/fullstack$ exit
+exit
