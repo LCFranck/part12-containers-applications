@@ -37,7 +37,12 @@ singleRouter.delete('/', async (req, res) => {
 //jobba rhär
 /* GET todo. */
 singleRouter.get('/:id', async (req, res) => {
-  res.send(req.todo);
+const todo = await Todo.findById(req.params.id);
+  if (todo) {
+    res.json(todo);
+  } else {
+    res.status(404).end();
+  }
 });
 
 /* PUT todo. */

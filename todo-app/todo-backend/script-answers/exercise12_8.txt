@@ -1,0 +1,112 @@
+Script started on 2026-02-16 13:33:33+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="87" LINES="45"]
+[?2004h(base) ]0;cassa@FatAss: ~/fullstack/part12-containers-applications/todo-app/todo-backend[01;32mcassa@FatAss[00m:[01;34m~/fullstack/part12-containers-applications/todo-app/todo-backend[00m$ exit[A(base) ]0;cassa@FatAss: ~/fullstack/part12-containers-applications/todo-app/todo-backend[01;32mcassa@FatAss[00m:[01;34m~/fullstack/part12-containers-applications/todo-app/todo-backend[00m$ docker exec -it 9d8010c12a66 mongosh -u root -p example[3Pba[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A(base) ]0;cassa@FatAss: ~/fullstack/part12-containers-applications/todo-app/todo-backend[01;32mcassa@FatAss[00m:[01;34m~/fullstack/part12-containers-applications/todo-app/todo-backend[00m$ exit[K[A(base) ]0;cassa@FatAss: ~/fullstack/part12-containers-applications/todo-app/todo-backend[01;32mcassa@FatAss[00m:[01;34m~/fullstack/part12-containers-applications/todo-app/todo-backend[00m$ docker exec -it 9d8010c12a66 bash
+[?2004l[?2004hroot@9d8010c12a66:/# mongois  sh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	699300a21b384ca2448ce5af
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.6.0[0m
+Using MongoDB:		8.2.5
+[1m[33mUsing Mongosh[0m:		2.6.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2026-02-16T10:52:24.381+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2026-02-16T10:52:24.659+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-02-16T10:52:24.659+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-02-16T10:52:24.659+00:00: We suggest setting the contents of sysfsFile to 0.
+   2026-02-16T10:52:24.659+00:00: vm.max_map_count is too low
+   2026-02-16T10:52:24.659+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Gshow collections
+
+[1G[0Jtest> [7G show collections
+[1G[0J... [5Gtodos
+
+[1G[0Jtest> [7G[1G[0Jtest> todos[12G[1G[0Jtest>  show collections[24G
+
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15G[1G[0Jthe_database> use the_database[31G[1G[0Jthe_database>  show collections[32G
+[1mtodos[0m
+[1G[0Jthe_database> [15G db.todos.find({})
+[
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.collection.insertOne()[1D[1G[0Jthe_database> db.collection.insertOne[44m([49m)[39G[1G[0Jthe_database> db.collection.insertOne[44m([49m{)[40G[1G[0Jthe_database> db.collection.insertOne[44m([49m{})[41G[1D[1G[0Jthe_database> db.collection.insertOne([44m{[49m})[40G[1G[0Jthe_database> db.collection.insertOne([44m{[49mt})[41G[1G[0Jthe_database> db.collection.insertOne([44m{[49mte})[42G[1G[0Jthe_database> db.collection.insertOne([44m{[49mtex})[43G[1G[0Jthe_database> db.collection.insertOne([44m{[49mtext})[44G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m:})[45G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: })[46G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"})[39m[47G"Increase the number of tools in my tool belt[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool belt[32m"})[39m[6G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool belt})[5G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool bel})[4G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool be})[3G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool b})[2G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool })[1G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool})[87G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my too}) [86G[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my to})[85G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my t})[84G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my })[83G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my})[82G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m m})[81G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m })[80G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m})[79G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools i})[78G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools })[77G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools})[76G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tool})[75G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m too})[74G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m to})[73G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m t})[72G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m })[71G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number [36mof[39m})[70G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number o})[69G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number })[68G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the number})[67G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the numbe})[66G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the numb})[65G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the num})[64G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the nu})[63G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the n})[62G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the })[61G[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m""[39mIncrease the})[60G[1C[1G[0Jthe_database> db.collection.insertOne[44m([49m{[33mtext[39m: [32m""[39mIncrease the})[61G[1C[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the})[62G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the}[61G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the[60G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease th[59G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease t[58G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease [57G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease[56G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncreas[55G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncrea[54G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncre[53G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIncr[52G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mInc[51G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mIn[50G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39mI[49G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m""[39m[48G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"[39m[47G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [46G[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m:[45G[1G[0Jthe_database> db.collection.insertOne({text[44G[1G[0Jthe_database> db.collection.insertOne({tex[43G[1G[0Jthe_database> db.collection.insertOne({te[42G[1G[0Jthe_database> db.collection.insertOne({t[41G[1G[0Jthe_database> db.collection.insertOne({[40G[1G[0Jthe_database> db.collection.insertOne([39G[1G[0Jthe_database> db.collection.insertOne[38G[1G[0Jthe_database> db.collection.insertOn[37G[1G[0Jthe_database> db.collection.insertO[36G[1G[0Jthe_database> db.collection.insert[35G[1G[0Jthe_database> db.collection.inser[34G[1G[0Jthe_database> db.collection.inse[33G[1G[0Jthe_database> db.collection.ins[32G[1G[0Jthe_database> db.collection.in[31G[1G[0Jthe_database> db.collection.i[30G[1G[0Jthe_database> db.collection.[29G[1G[0Jthe_database> db.collection[28G[1G[0Jthe_database> db.collectio[27G[1G[0Jthe_database> db.collecti[26G[1G[0Jthe_database> db.collect[25G[1G[0Jthe_database> db.collec[24G[1G[0Jthe_database> db.colle[23G[1G[0Jthe_database> db.coll[22G[1G[0Jthe_database> db.col[21G[1G[0Jthe_database> db.co[20G[1G[0Jthe_database> db.c[19G[1G[0Jthe_database> db.[18G[1G[0Jthe_database> db[17G[1G[0Jthe_database> d[16G[1G[0Jthe_database> [15G[1G[0Jthe_database>  db.todos.find({})[33G[1G[0Jthe_database>  show collections[32G
+[1mtodos[0m
+[1G[0Jthe_database> [15G[1G[0Jthe_database>  show collections[32G[1G[0Jthe_database>  db.todos.find({})[33G
+[
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G db.collection.insertOne({text[33mtext[39m: [32m"[39m[32m"[39mIncrease the number o[36mof[39m tools i[36min[39m my tool[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool [87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool [1G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool [87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool [1G[32m"[39m[1D[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool[32m"[39m[1G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool[32m"[39m[87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m""[39mIncrease the number [36mof[39m tools [36min[39m my tool[32m"[39m[87G[1A[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m [48G[1A[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [44m[32m"[49mIncrease the number of tools in my tool"[39m [87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m [1G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m [1G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [44m[32m"[49mIncrease the number of tools in my tool"[39m [87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [44m[32m"[49mIncrease the number of tools in my tool"[39m [87G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m [1G[1A[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m [1G, d[36mdo[39mdone: fals[33mfalse[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'699302741b384ca2448ce5b0'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database>  db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[16G[1A[1G[0Jthe_database>  db.todos.find({})[33G
+[
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.collection.insertOne({text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32m"[39m, d[36mdo[39mdone: fals[33mfalse[39m})[1D[1G[0Jthe_database> db.collection.insertOne[44m([49m{[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[14G[1D[1A[1G[0Jthe_database> db.collection.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[13G[1D[1A[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[12G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1A[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[87G[1A[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [44m[32m"[49mIncrease the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[86G[1A[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[85G[1A[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool[44m"[39m[49m, [33mdone[39m: [33mfalse[39m})[46G[1A[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[45G[1A[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m[44m}[49m)[39G[1A[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m}[44m)[49m[38G[1A[1D[1G[0Jthe_database> db.collection.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[37G[1A[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1C[1G[0Jthe_database> db.collectio.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[27G[1A[1G[0Jthe_database> db.collecti.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[26G[1A[1G[0Jthe_database> db.collect.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[25G[1A[1G[0Jthe_database> db.collec.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[24G[1A[1G[0Jthe_database> db.colle.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[23G[1A[1G[0Jthe_database> db.coll.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[22G[1A[1G[0Jthe_database> db.col.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[21G[1A[1G[0Jthe_database> db.co.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[20G[1A[1G[0Jthe_database> db.c.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[19G[1A[1G[0Jthe_database> db..insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[18G[1A[1G[0Jthe_database> db.t.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[19G[1A[1G[0Jthe_database> db.to.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[20G[1A[1G[0Jthe_database> db.tod.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[21G[1A[1G[0Jthe_database> db.todo.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[22G[1A[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[23G[1A[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[10G
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'699302ba1b384ca2448ce5b1'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool"[39m, [33mdone[39m: [33mfalse[39m})[10G[1A[1G[0Jthe_database>  db.todos.find({})[33G
+[
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6991fa580c6de26d3a8ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'699302ba1b384ca2448ce5b1'[39m),
+    text: [32m'Increase the number of tools in my tool'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004l]0;[?2004hroot@9d8010c12a66:/# exit
+[?2004lexit
+[?2004h(base) ]0;cassa@FatAss: ~/fullstack/part12-containers-applications/todo-app/todo-backend[01;32mcassa@FatAss[00m:[01;34m~/fullstack/part12-containers-applications/todo-app/todo-backend[00m$ e xiut[K[Kt
+[?2004lexit
+
+Script done on 2026-02-16 13:43:20+02:00 [COMMAND_EXIT_CODE="0"]
